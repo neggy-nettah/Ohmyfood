@@ -1,0 +1,47 @@
+
+//importation des polices
+@import "base/_fonts";
+
+//importation des elements de style
+@import "abstracts/variables";
+
+//importation des layouts
+@import "layout/_footer.scss";
+@import "layout/_header.scss";
+@import "layout/_main.scss";
+
+//importation des composants
+@import "components/_buttons.scss";
+@import "components/_cards.scss";
+
+//importation des polices
+@import "base/_fonts";
+
+
+
+body {
+    max-width: 1440px;
+    margin: auto;
+    font-family: "Roboto", sans-serif;
+}
+
+h1{
+    font-family: "Shrikhand", sans-serif;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.13px;
+}
+
+h3{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.09px;
+    color: black;
+}
+
+p{
+    color: black;
+}
