@@ -4,7 +4,7 @@
     align-items: center;
     position: absolute;
     top: 10px;
-    left: 247px;
+    right: 20px;
     background-color: $green ;
     color: $green-font;
     border-radius: 2px;
@@ -14,5 +14,10 @@
     width: 80px;
     font-weight: 500;
     font-family: 'Roboto';
+
+    @media (min-width: 950px) {
+        //position: relative;
+        
+    }
 
 }
