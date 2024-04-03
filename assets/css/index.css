@@ -410,7 +410,7 @@ header {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   margin-inline: auto;
   padding-top: 50px;
 }
@@ -437,14 +437,11 @@ header {
 
 .main_conainer--menu__list {
   display: flex;
-  align-self: center;
   min-width: 335px;
   max-width: 630px;
   border-radius: 15.04px;
-  border: none;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   background-color: rgb(255, 255, 255);
-  flex-direction: column;
   padding: 10px;
   gap: 5px;
   /* -webkit-box-shadow: 0px 4px 10px 0px; */
@@ -457,29 +454,60 @@ header {
   overflow: hidden;
   transition: padding-right 0.5s ease;
   /*&:hover {
-      padding-right: 0px; // Réduit le padding pour "pousser" le contenu
+        padding-right: 0px; // Réduit le padding pour "pousser" le contenu
 
-      .color-band {
-          max-width: 50px; // Permet au bandeau d'apparaître
-      }
-  }
+        .color-band {
+            max-width: 50px; // Permet au bandeau d'apparaître
+        }
+    }
 
-  .color-band {
-      content: "";
-      position: absolute;
-      right: 0;
-      width: 50px; // Largeur initiale du bandeau
-      max-width: 0; // Commence sans largeur
-      height: 100%;
-      background-color: rgba(153, 226, 208, 1) ;
-      transition: max-width 0.5s ease;
-      top: 0px;
-  }*/
+    .color-band {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 50px; // Largeur initiale du bandeau
+        max-width: 0; // Commence sans largeur
+        height: 100%;
+        background-color: rgba(153, 226, 208, 1) ;
+        transition: max-width 0.5s ease;
+        top: 0px;
+    }*/
 }
 @media (min-width: 950px) {
   .main_conainer--menu__list {
     width: 100%;
   }
+}
+.main_conainer--menu__list label {
+  flex: 1;
+}
+.main_conainer--menu__list__checkbox {
+  position: absolute;
+  right: -40px;
+  top: 0;
+  height: 100%;
+  transition: right 0.5s ease;
+  display: flex;
+  align-items: end;
+}
+.main_conainer--menu__list__checkbox_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #99e2d0;
+}
+.main_conainer--menu__list:has(input:checked) .main_conainer--menu__list__checkbox {
+  right: 0px;
+}
+.main_conainer--menu__list__price {
+  padding: 5px 10px;
+}
+.main_conainer--menu__list input[type=checkbox] {
+  display: none;
 }
 .main_conainer--menu__list__title {
   display: flex;
