@@ -41,7 +41,6 @@
 
         @media (min-width: 950px) {
             flex-direction: row;
-
         }
     }
 
@@ -59,7 +58,6 @@
         -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
         margin: 10px;
         background-color: rgb(246, 246, 246);
-
     }
 
     &__number{
@@ -78,7 +76,6 @@
 
     & i{
         font-size: 19px;
-
     }
 
     &__description{
@@ -111,14 +108,10 @@
     &__title{
         display: flex;
         border-radius: 15px;
-        /* font-size: 20px; */
-        /* font-weight: 700; */
         padding: 0px 0px 0px 20px;   
         
         @media (min-width: 950px) {
-            padding: 0px;
-
-            
+            padding: 0px;    
         }
     }
     
@@ -133,17 +126,14 @@
             flex-direction: row;
             flex-wrap: wrap;
             gap: 50px 100px;
-            justify-content: center;
-            
+            justify-content: center;   
         }
-        
     }
 
     &__item{
 
         @media (min-width: 950px) {
-            width: calc(50% - 50px);
-            
+            width: calc(50% - 50px);    
         }
     }
 
@@ -157,19 +147,16 @@
 
         @media (min-width: 950px) {
             flex-direction: row;
-            
         }
-
     }
 
     &__article{
         display: flex;
         flex-direction: column;
-       // max-height: 340px;
         background-color: white;
         border-radius: 15px;
         width: 100%;
-        max-width: 340px;
+        max-width: 80%;
         max-height: 280px;
         position: relative;
 
@@ -179,10 +166,9 @@
 
         & img{
             max-height: 200px;
-            max-width: 340px;
+            max-width: 100%;
             background-size: cover;
             object-fit: cover;
-            /* -webkit-font-smoothing: antialiased; */
             border-radius: 15px 15px 0 0;
 
             @media (min-width: 950px) {

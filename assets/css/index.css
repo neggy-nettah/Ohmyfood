@@ -178,8 +178,6 @@ header .location {
 .restaurant-list__title {
   display: flex;
   border-radius: 15px;
-  /* font-size: 20px; */
-  /* font-weight: 700; */
   padding: 0px 0px 0px 20px;
 }
 @media (min-width: 950px) {
@@ -226,7 +224,7 @@ header .location {
   background-color: white;
   border-radius: 15px;
   width: 100%;
-  max-width: 340px;
+  max-width: 80%;
   max-height: 280px;
   position: relative;
 }
@@ -237,11 +235,10 @@ header .location {
 }
 .restaurant-list__article img {
   max-height: 200px;
-  max-width: 340px;
+  max-width: 100%;
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
-  /* -webkit-font-smoothing: antialiased; */
   border-radius: 15px 15px 0 0;
 }
 @media (min-width: 950px) {
@@ -358,7 +355,7 @@ footer .footer__link {
   flex-direction: column;
   gap: 7px;
 }
-@media (min-width: 769px) {
+@media (min-width: 950px) {
   footer .footer__link {
     flex-direction: row;
     margin-right: 25px;
@@ -417,7 +414,7 @@ header {
 .main_container--menu__title {
   display: flex;
   align-items: center;
-  gap: 90px;
+  gap: 55px;
 }
 .main_container--menu__title__font {
   font-family: "Shrikhand", serif;
@@ -442,19 +439,15 @@ header {
 
 .main_conainer--menu__list {
   display: flex;
-  min-width: 335px;
+  min-width: 320px;
   max-width: 630px;
+  width: 60vw;
   border-radius: 15.04px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   background-color: rgb(255, 255, 255);
   padding: 10px;
   gap: 5px;
   /* -webkit-box-shadow: 0px 4px 10px 0px; */
-  /* margin: 10px; */
-  /* align-items: center; */
-  /* gap: 0px; */
-  /*width: 100%;*/
-  /*height: 69px;*/
   position: relative;
   overflow: hidden;
   transition: padding-right 0.5s ease;
@@ -462,6 +455,9 @@ header {
 @media (min-width: 950px) {
   .main_conainer--menu__list {
     width: 100%;
+  }
+  .main_conainer--menu__list:has(input:hover) .main_conainer--menu__list__checkbox {
+    right: 0px;
   }
 }
 .main_conainer--menu__list label {
@@ -485,11 +481,6 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #99e2d0;
-}
-@media (min-width: 950px) {
-  .main_conainer--menu__list__checkbox_icon:hover {
-    background-color: red;
-  }
 }
 .main_conainer--menu__list:has(input:checked) .main_conainer--menu__list__checkbox {
   right: 0px;
@@ -551,12 +542,77 @@ header {
 
 .main_conainer--menu__list__subtitle {
   margin: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 75%;
 }
 
 .main_conainer--menu__list__price {
   margin: 0px;
 }
 
+.main_conainer--menu__list__checkbox_input {
+  display: none; /* Cache la checkbox réelle si vous ne voulez pas qu'elle soit visible */
+}
+
+.go-back-link {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.go-back {
+  position: absolute;
+  top: 33px;
+  left: 17px;
+}
+
+.section__loader {
+  position: fixed; /* Couvre toute la page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #FF79DA; /* Corrige la couleur du fond pour qu'elle soit valide */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 1;
+  animation: fadeOutLoader 7s forwards;
+}
+
+@keyframes fadeOutLoader {
+  to {
+    opacity: 0; /* Devient complètement transparent */
+    visibility: hidden; /* S'assure qu'il ne bloque pas les interactions avec la page après disparition */
+  }
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #99e2d0;
+  margin: 0 9px; /* Espace entre les points */
+  animation: pulse 1s infinite;
+  animation-delay: calc(0.2s * var(--i)); /* Délai basé sur la variable personnalisée pour décaler l'animation de chaque point */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2); /* Grossit au milieu de l'animation */
+  }
+}
 .discover__button {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
