@@ -392,7 +392,6 @@ header {
 
 .header_img--menu--img {
   width: 100%;
-  /* z-index: 20; */
   height: 383px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -429,7 +428,6 @@ header {
 }
 .main_container--menu__section {
   margin-bottom: 40px;
-  /*width: ;*/
 }
 .main_container--menu__section__content {
   display: flex;
@@ -437,7 +435,7 @@ header {
   gap: 12px;
 }
 
-.main_conainer--menu__list {
+.main_container--menu__list {
   display: flex;
   min-width: 320px;
   max-width: 630px;
@@ -453,17 +451,17 @@ header {
   transition: padding-right 0.5s ease;
 }
 @media (min-width: 950px) {
-  .main_conainer--menu__list {
+  .main_container--menu__list {
     width: 100%;
   }
-  .main_conainer--menu__list:has(input:hover) .main_conainer--menu__list__checkbox {
+  .main_container--menu__list:has(input:hover) .main_container--menu__list__checkbox {
     right: 0px;
   }
 }
-.main_conainer--menu__list label {
+.main_container--menu__list label {
   flex: 1;
 }
-.main_conainer--menu__list__checkbox {
+.main_container--menu__list__checkbox {
   position: absolute;
   right: -40px;
   top: 0;
@@ -472,7 +470,7 @@ header {
   display: flex;
   align-items: end;
 }
-.main_conainer--menu__list__checkbox_icon {
+.main_container--menu__list__checkbox_icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -482,48 +480,48 @@ header {
   align-items: center;
   background-color: #99e2d0;
 }
-.main_conainer--menu__list:has(input:checked) .main_conainer--menu__list__checkbox {
+.main_container--menu__list:has(input:checked) .main_container--menu__list__checkbox {
   right: 0px;
 }
-.main_conainer--menu__list__price {
+.main_container--menu__list__price {
   padding: 5px 10px;
 }
-.main_conainer--menu__list input[type=checkbox] {
+.main_container--menu__list input[type=checkbox] {
   display: none;
 }
-.main_conainer--menu__list__title {
+.main_container--menu__list__title {
   display: flex;
   font-weight: 500;
   margin: 0px;
   font-size: 18px;
 }
-.main_conainer--menu__list__sub-and-price {
+.main_container--menu__list__sub-and-price {
   display: flex;
   justify-content: space-between;
 }
-.main_conainer--menu__list__sub-and-price__price__icon {
+.main_container--menu__list__sub-and-price__price__icon {
   display: flex;
 }
 
-.main_conainer--menu__section__content {
+.main_container--menu__section__content {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 @media (min-width: 950px) {
-  .main_conainer--menu__section__content {
+  .main_container--menu__section__content {
     width: 634px;
   }
 }
 
-.main_conainer--menu__entree__title {
+.main_container--menu__entree__title {
   font-weight: 300;
   font-size: 16px;
   position: relative; /* Permet de positionner le pseudo-élément par rapport à ce titre */
   display: inline-block;
 }
 
-.main_conainer--menu__entree__title::after {
+.main_container--menu__entree__title::after {
   content: "";
   position: absolute;
   left: 20px;
@@ -534,13 +532,13 @@ header {
   transform: translateX(-50%);
 }
 
-.main_conainer--menu__list__sub-and-price {
+.main_container--menu__list__sub-and-price {
   margin: 0px;
   display: flex;
   justify-content: space-between;
 }
 
-.main_conainer--menu__list__subtitle {
+.main_container--menu__list__subtitle {
   margin: 0px;
   white-space: nowrap;
   overflow: hidden;
@@ -548,11 +546,11 @@ header {
   max-width: 75%;
 }
 
-.main_conainer--menu__list__price {
+.main_container--menu__list__price {
   margin: 0px;
 }
 
-.main_conainer--menu__list__checkbox_input {
+.main_container--menu__list__checkbox_input {
   display: none; /* Cache la checkbox réelle si vous ne voulez pas qu'elle soit visible */
 }
 

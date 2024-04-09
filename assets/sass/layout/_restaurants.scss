@@ -17,7 +17,6 @@ header {
 
 .header_img--menu--img {
     width: 100%;
-    /* z-index: 20; */
     height: 383px;
     object-fit: cover;
 }
@@ -53,9 +52,9 @@ header {
         display: flex;
         justify-content: space-between;
     }
+    
     &__section {
         margin-bottom: 40px;
-        /*width: ;*/
 
         &__content {
             display: flex;
@@ -65,7 +64,7 @@ header {
     }
 }
 
-.main_conainer--menu__list {
+.main_container--menu__list {
     display: flex;
     min-width: 320px;
     max-width: 630px;
@@ -83,7 +82,7 @@ header {
     @media (min-width: 950px) {
         width: 100%;
         &:has(input:hover) {
-            .main_conainer--menu__list__checkbox {
+            .main_container--menu__list__checkbox {
                 right: 0px;
             }
         }
@@ -119,7 +118,7 @@ header {
     
     &:has(input:checked) {
 
-        .main_conainer--menu__list__checkbox {
+        .main_container--menu__list__checkbox {
         right: 0px;
         }
     }
@@ -152,7 +151,7 @@ header {
 }
 
 
-.main_conainer--menu__section__content {
+.main_container--menu__section__content {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -162,14 +161,14 @@ header {
     }
 }
 
-.main_conainer--menu__entree__title {
+.main_container--menu__entree__title {
     font-weight: 300;
     font-size: 16px;
     position: relative; /* Permet de positionner le pseudo-élément par rapport à ce titre */
     display: inline-block;
 }
 
-.main_conainer--menu__entree__title::after {
+.main_container--menu__entree__title::after {
     content: '';
     position: absolute;
     left: 20px;
@@ -180,13 +179,13 @@ header {
     transform: translateX(-50%);
 }
 
-.main_conainer--menu__list__sub-and-price {
+.main_container--menu__list__sub-and-price {
     margin: 0px;
     display: flex;
     justify-content: space-between;
 }
 
-.main_conainer--menu__list__subtitle {
+.main_container--menu__list__subtitle {
     margin: 0px;
     white-space: nowrap;
     overflow: hidden;
@@ -194,10 +193,10 @@ header {
     max-width: 75%;
 }
 
-.main_conainer--menu__list__price {
+.main_container--menu__list__price {
     margin: 0px;
 }
-.main_conainer--menu__list__checkbox_input {
+.main_container--menu__list__checkbox_input {
     display: none; /* Cache la checkbox réelle si vous ne voulez pas qu'elle soit visible */
 }
 
