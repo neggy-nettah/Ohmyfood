@@ -94,10 +94,10 @@ header {
 
     &__checkbox {
         position: absolute;
-        right: -40px;
+        right: -40px; // initialement est masquée
         top: 0;
         height: 100%;
-        transition: right 0.5s ease;
+        transition: right 0.5s ease; // pour un effet plus fluide
         display: flex;
         align-items: end;
         }
