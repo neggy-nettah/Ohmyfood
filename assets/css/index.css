@@ -373,6 +373,7 @@ footer .footer__link .fa-handshake-angle {
   width: 14px;
 }
 
+/* Global styles */
 body {
   max-width: 100%;
   margin: auto;
@@ -564,6 +565,54 @@ header {
   position: absolute;
   top: 33px;
   left: 17px;
+}
+
+/* Styles for heart button */
+.heart-label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 24px; /* Fix width */
+  height: 24px; /* Fix height */
+  overflow: hidden;
+}
+
+.heart-outline {
+  color: #999;
+  font-size: 24px;
+}
+
+.heart-filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  font-size: 24px;
+  -webkit-clip-path: inset(100% 0 0 0);
+          clip-path: inset(100% 0 0 0); /* Initially hidden */
+  transition: -webkit-clip-path 0.5s ease;
+  transition: clip-path 0.5s ease;
+  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
+}
+
+/* Fill heart on hover */
+input[type=checkbox]:hover + .heart-label .heart-filled {
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0); /* Fully visible on hover */
+}
+
+/* Keep heart filled if checked */
+input[type=checkbox]:checked + .heart-label .heart-filled {
+  -webkit-clip-path: inset(0 0 0 0);
+          clip-path: inset(0 0 0 0); /* Fully visible when checked */
+}
+
+/* Empty heart if not checked */
+input[type=checkbox]:not(:checked) + .heart-label .heart-filled {
+  -webkit-clip-path: inset(100% 0 0 0);
+          clip-path: inset(100% 0 0 0); /* Hidden when not checked */
 }
 
 .section__loader {
